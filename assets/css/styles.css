@@ -296,8 +296,8 @@ footer{
     position: absolute;
     top: 50%;
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 40px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -306,14 +306,23 @@ footer{
     color: transparent;
     border: none;
     outline: none;
-    background: #000000;
     z-index: 1;
 }
 .slick-next{
-    right: -30px;
+    right: -40px;
+    background-image: url(../images/arrow_right.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
 }
 .slick-prev{
-    left: -30px;
+    left: -40px;
+    background-image: url(../images/arrow_left.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
 }
 @media (max-width: 991px) {
     .navbar{
