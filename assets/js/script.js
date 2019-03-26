@@ -1,10 +1,10 @@
-        var squares = $(".rounded-squares")
-        
-            $(".rounded-squares").bind('mouseenter mouseleave click touch', function (event) {
-                if (event.type == 'click' || event.type=='touch') {
+        var squares = $(".rounded-squares, .unclick-text")
+        $.each(squares, function (index, value) {
+            $(squares).bind('mouseenter mouseleave click touchstart', function (event) {
+                if (event.type == 'click' || event.type=='touchstart') {
                     if($(this).hasClass('stay blue-bg')){
                         $(this).removeClass('stay blue-bg');
-                        $('.rounded-squares').removeClass('stay blue-bg');
+                        $('.rounded-squares, .unclick-text').removeClass('stay blue-bg');
                     }else{
                         $(this).addClass('stay blue-bg'); 
                     }; 
@@ -20,7 +20,7 @@
                     };
                 }
             });
-        
+        });
 
         function scrollToAnchor(aid){
             var aTag = $("section[name='"+ aid +"']");
