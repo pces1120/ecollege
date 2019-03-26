@@ -1,13 +1,10 @@
         var squares = $(".rounded-squares, .unclick-text")
         $.each(squares, function (index, value) {
-            $(squares).bind('mouseenter mouseleave click touchstart', function (event) {
-                if (event.type == 'click' || event.type=='touchstart') {
-                    if($(this).hasClass('stay blue-bg')){
-                        $(this).removeClass('stay blue-bg');
-                        $('.rounded-squares, .unclick-text').removeClass('stay blue-bg');
-                    }else{
+            $(squares).bind('mouseenter mouseleave click touch', function (event) {
+                if (event.type == 'click' || event.type=='touch') {
+                    
                         $(this).addClass('stay blue-bg'); 
-                    }; 
+                   
                 } else if (event.type == 'mouseenter') {
                     $(this).addClass('grow')
                     if($('.rounded-squares').hasClass('grow')){
