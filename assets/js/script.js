@@ -1,7 +1,7 @@
         var squares = $(".rounded-squares")
         
-            $(".rounded-squares").bind('mouseenter mouseleave click touchstart', function (event) {
-                if (event.type == 'click' || event.type=='touchstart') {
+            $(".rounded-squares").bind('mouseenter mouseleave click touch', function (event) {
+                if (event.type == 'click' || event.type=='touch') {
                     if($(this).hasClass('stay blue-bg')){
                         $(this).removeClass('stay blue-bg');
                         $('.rounded-squares').removeClass('stay blue-bg');
