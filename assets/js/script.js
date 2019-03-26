@@ -1,10 +1,13 @@
-var squares = $(".rounded-squares")
+        var squares = $(".rounded-squares")
         $.each(squares, function (index, value) {
             $(squares).bind('mouseenter mouseleave click touchstart', function (event) {
                 if (event.type == 'click' || event.type=='touchstart') {
-                    $('.rounded-squares').removeClass('stay blue-bg');
-                    $(this).addClass('stay blue-bg'); 
-
+                    if($(this).hasClass('stay blue-bg')){
+                        $(this).removeClass('stay blue-bg');
+                        $('.rounded-squares').removeClass('stay blue-bg');
+                    }else{
+                        $(this).addClass('stay blue-bg'); 
+                    }; 
                 } else if (event.type == 'mouseenter') {
                     $(this).addClass('grow')
                     if($('.rounded-squares').hasClass('grow')){
@@ -14,27 +17,6 @@ var squares = $(".rounded-squares")
                 } else if (event.type == 'mouseleave') {
                     if($('.rounded-squares').not('stay')){
                         $(this).removeClass('grow');
-                    };
-                }
-            });
-        });
-
-        var circles = $(".white-circle")
-        $.each(circles, function (index, value) {
-            $(circles).bind('mouseenter mouseleave click touchstart', function (event) {
-                if (event.type == 'click' || event.type=='touchstart') {
-                   
-
-                } else if (event.type == 'mouseenter') {
-                    $(this).addClass('cyan-circle')
-                    if($('.white-circle').hasClass('cyan-circle')){
-                        $('.white-circle').removeClass('cyan-circle');
-                        $(this).addClass('cyan-circle');
-                        
-                    };
-                } else if (event.type == 'mouseleave') {
-                    if($('.white-circle').not('stay')){
-                        $(this).removeClass('cyan-circle');
                     };
                 }
             });
@@ -88,4 +70,8 @@ var squares = $(".rounded-squares")
                     }
                 })                
             }
+        });
+
+        $('.navbar-nav>li>a').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
         });
