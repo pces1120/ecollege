@@ -1,7 +1,7 @@
         var squares = $(".rounded-squares")
-        $.each(squares, function (index, value) {
-            $(squares).bind('mouseenter mouseleave click ', function (event) {
-                if (event.type == 'click') {
+        
+            $(".rounded-squares").bind('mouseenter mouseleave click touchstart', function (event) {
+                if (event.type == 'click' || event.type=='touchstart') {
                     if($(this).hasClass('stay blue-bg')){
                         $(this).removeClass('stay blue-bg');
                         $('.rounded-squares').removeClass('stay blue-bg');
@@ -20,7 +20,7 @@
                     };
                 }
             });
-        });
+        
 
         function scrollToAnchor(aid){
             var aTag = $("section[name='"+ aid +"']");
