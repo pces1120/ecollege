@@ -1,6 +1,9 @@
 .align-center{
     margin: 0 auto;
 }
+.no-padding{
+    padding: 0;
+}
 .center-text{
     text-align: center;
 }
@@ -9,6 +12,9 @@
 }
 .blue-text{
     color: #000033;
+}
+.light-blue-text{
+    color:#4499D4;
 }
 .paragraph-size, .unclick-text{
     font-size: 17px;
@@ -23,8 +29,8 @@
     background-repeat: none;
 }
 .navbar{
-    padding: 2rem 5rem 0.5rem 5rem;
-    background-color: #ffffff;
+    padding: 1rem 5rem 0.5rem 5rem;
+    background-color: #000033;
 }
 .navbar-brand{
     padding: 0;
@@ -33,22 +39,36 @@
     width: 173px;
     height: auto;
 }
+.hide-line{
+    display: inline-block;
+    margin: 0;
+    width: 20px;
+    border-top: 1px solid #ffffff;
+    transform:rotate(90deg);
+}
+.show-button{
+    display: none;
+}
 ul.navbar-nav{
     margin: 0 0 0 auto;
     width: 90%;
     justify-content: space-around;
     background-color: transparent;
+    align-items: center;
 }
 .navbar-light .navbar-nav .nav-link{
-    color: #000033;
-    font-size: 18px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: .25rem;
+    margin: .25rem;
 }
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus{
-    color: #000033;
+    color: #ffffff;
     font-weight: bold;
+    border-bottom:2px solid #4499D4;
 }
 .navbar-light .navbar-toggler{
-    border-color: #ffffff;
+    border-color: #000033;
 }
 .navbar-light .navbar-toggler-icon{
     background-image: url(../images/menu_mobile.png)
@@ -65,8 +85,8 @@ ul.navbar-nav{
     background-color: #4499d4;
 }
 .btn-primary:hover{
-    background-color: #000033;
-    border-color: #000033;
+    background-color: #007bff;
+    border-color: #007bff;
 }
 #first-section article{
     display: block;
@@ -76,7 +96,7 @@ ul.navbar-nav{
     background-image: url(../images/Desktop_bg_01.jpg);
     text-align: right;
     height: 80vh;
-    margin-top: 95px;
+    margin-top: 75px;
 }
 #first-section article p{
     padding-top: 15px;
@@ -91,8 +111,11 @@ ul.navbar-nav{
 #fourth-section{
     padding: 50px 15px 0px 15px;
 }
-#second-section, #fourth-section, #fifth-section{
+#second-section, #fourth-section, {
     background-color: #f2edf7;
+}
+#fifth-section{
+    background-color: #e4e4e4;
 }
 h1 span{
     font-weight: 400;
@@ -100,70 +123,47 @@ h1 span{
 #third-section h1 span{
     font-weight: 300;
 }
-#second-section #square-1{
-    background-image: url(../images/Offer_platform.jpg);
+.img-what{
+    width: 20%;
+    vertical-align: top;
 }
-#second-section #square-2{
-    background-image: url(../images/Offer_courses.jpg);
+.img-what-1{
+    background-image: url(../images/section1_01.png);
 }
-#second-section #square-3{
-    background-image: url(../images/Offer_personalized.jpg);
+.img-what-2{
+    background-image: url(../images/section1_02.png);
 }
-#second-section #square-4{
-    background-image: url(../images/Offer_install.jpg);
+.img-what-3{
+    background-image: url(../images/section1_03.png);
 }
-#second-section #square-5{
-    background-image: url(../images/Offer_colab.jpg);
+.article-what{
+    width: 75%;
+    display: inline-block;
+    padding: 20px 0px 20px 15px; 
 }
-#second-section #square-6{
-    background-image: url(../images/Offer_info.jpg);
+.article-what h3, .article-what p{
+   margin-bottom: 0;
+   
 }
-#second-section #square-7{
-    background-image: url(../images/Offer_efficency.jpg);
+.article-what p{
+    font-size: 14px;
 }
-.rounded-squares{
-    border-radius: 25%;
-    width:180px;
-    height: 180px;
-    padding-top: 29%;
-    margin: 25px auto;
-    -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.65);
-    -moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.65);
-    box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.65);
-    transition: all .2s ease-in-out;
-    line-height: auto;
+.article-what h3{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
 }
-.rounded-squares-2{
-    border-radius: 25%;
-    width:180px;
-    height: 180px;
-    padding-top: 25%;
-    margin: 25px auto;
-    -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.65);
-    -moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.65);
-    box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.65);
-    transition: all .2s ease-in-out;
-    line-height: auto;
-}
-.rounded-squares.grow{
-    transform: scale(1.1);
-}
-.rounded-squares.stay{
-    transform: scale(1.1);
-}
-.rounded-squares p, #seventh-section p{
-    margin-bottom: 0;
-}
-.rounded-squares:hover{
-    cursor: pointer;
-}
-.more{
-    width:20px;
-    height:20px;
+#second-section .blue-bg{
+    margin: 15px auto;
+    display: flex;
+
 }
 #third-section {
     background-image: url(../images/Desktop_bg_02.jpg);
     text-align: right;
+}
+#third-section .col-lg-2{
+    max-width: 13.666667%;
 }
 .white-circle{
     width: 70px;
@@ -204,7 +204,7 @@ select{
     float: right;
 }
 #seventh-section{
-    background-color: #484848;
+    background-color: #000033;
     padding: 30px 0px 25px 0px;
 }
 #seventh-section article{
@@ -239,30 +239,12 @@ footer{
     background-color: #000033;
     font-size: 12px;
 }
-.placeholder-precios{
-    background-color: #000033;
-    height: 400px;
-    margin-top: 30px;
-}
 .blue-bg{
     background-color: rgba(0,0,51,1);
     background-image: none!important;
     padding-top: 0;
     line-height: 18px;
     text-align: left;
-}
-.click-text, .blue-bg .unclick-text{
-    display: none;
-}
-.blue-bg .click-text, .unclick-text{
-    display: block;
-    margin: 0 auto;
-}
-
-.click-text{
-    padding: 25px 20px;
-    font-size: 16px;
-    font-weight: 300;
 }
 .benefits{
     background-color: #000033;
@@ -273,6 +255,9 @@ footer{
 }
 .benefits-2{
     background-color:#4499D4;
+}
+.benefits-2.prices{
+    background-color:#bebebe;
 }
 .benefits p{
     font-size: 13px;
@@ -293,6 +278,21 @@ footer{
 .your-class{
     width: 65%;
     margin: auto;
+}
+.benefits p.prices-title{
+    font-size: 35px;
+    line-height: 30px;
+    padding-top: 20px;
+}
+.prices-footer{
+    background-color: #ffffff;
+}
+.benefits p.prices-footer{
+    padding:5px 0px;
+    margin-top: 20px
+}
+.benefits.prices{
+    padding-bottom: 15px;
 }
 .slick-center{
     transition: transform .3s ease-out;
@@ -361,6 +361,12 @@ footer{
     .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus{
         color: #ffffff;
         font-weight: bold;
+    }
+    .hide-line, .hide-button{
+        display: none;
+    }
+    .show-button{
+         display: inline-block;
     }
     ul.navbar-nav li{
         text-align: right

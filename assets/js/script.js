@@ -24,6 +24,7 @@
         function scrollToAnchor(aid){
             var aTag = $("section[name='"+ aid +"']");
             $('html,body').animate({scrollTop: aTag.offset().top -95},'slow');
+            $('#menu').fadeOut();
         }
 
         (function() {
@@ -69,8 +70,4 @@
                     }
                 })                
             }
-        });
-
-        $('.navbar-nav>li>a').on('click', function(){
-            $('.navbar-collapse').collapse('hide');
         });
