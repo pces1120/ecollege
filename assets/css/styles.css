@@ -430,14 +430,14 @@ footer{
         font-size: 15px;
     }
 }
-@media (max-width: 766px){
-    #third-section .col-lg-2{
-        max-width: 21.666667%;
-    }
-}
 @media (max-width: 576px){
     #third-section .col-lg-2{
         max-width: 33.333333%;
+    }
+}
+@media (max-width: 500px) {
+    .slick-list{
+        padding: 0 40px!important;
     }
 }
 @media (max-width: 500px) {
