@@ -1,25 +1,42 @@
-        var squares = $(".rounded-squares, .unclick-text")
-        $.each(squares, function (index, value) {
-            $(squares).bind('mouseenter mouseleave click touch', function (event) {
-                if (event.type == 'click' || event.type=='touch') {                    
-                    if($(this).hasClass('stay blue-bg')){
-                        $('.rounded-squares, .unclick-text').removeClass('stay blue-bg');
-                    }else{
-                        $(this).addClass('stay blue-bg'); 
-                    };
+        var circles = $(".white-circle")
+        $.each(circles, function (index, value) {
+            $(circles).bind('mouseenter mouseleave click touchstart', function (event) {
+                if (event.type == 'click' || event.type=='touchstart') {
+                    $("#exampleModal").modal("show");
+                    $("#third-section").addClass("after_modal_appended");
+                    $('.modal-backdrop').appendTo('#third-section');   
+                    $('body').removeClass("modal-open")
+                    $('body').css("padding-right","");
+                        
                 } else if (event.type == 'mouseenter') {
-                    $(this).addClass('grow')
-                    if($('.rounded-squares').hasClass('grow')){
-                        $('.rounded-squares').removeClass('grow');
-                        $(this).addClass('grow');
+                    $(this).addClass('cyan-circle')
+                    if($('.white-circle').hasClass('cyan-circle')){
+                        $('.white-circle').removeClass('cyan-circle');
+                        $(this).addClass('cyan-circle');
+                        
                     };
                 } else if (event.type == 'mouseleave') {
-                    if($('.rounded-squares').not('stay')){
-                        $(this).removeClass('grow');
+                    if($('.white-circle').not('stay')){
+                        $(this).removeClass('cyan-circle');
                     };
                 }
             });
         });
+        
+        /*Open modal*/
+        function whatever (index){
+            $.ajax({
+                url: "modals/modal-" + index + ".html",
+                beforeSend: function () {
+                    $('#modal').fadeIn();
+                },
+                success: function (result) {
+                    $('#mainModal').html(result);
+                    $('#mainModal').fadeIn();
+                    $("#modal").toggleClass('show');
+                }
+            });
+        }
 
         function scrollToAnchor(aid){
             var aTag = $("section[name='"+ aid +"']");

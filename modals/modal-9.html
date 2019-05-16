@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+<script>
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+        }
+    };
+    xhttp.open("GET", "assets/data/modal-es.xml", true);
+    xhttp.send();
+
+    function myFunction(xml) {
+        let xmlDoc = xml.responseXML,
+        firstsrc_9 = xmlDoc.getElementsByTagName("firstsrc_9"),
+        secondsrc_9 = xmlDoc.getElementsByTagName("secondsrc_9"),
+        thirdsrc_9 = xmlDoc.getElementsByTagName("thirdsrc_9"),
+        fourthsrc_9 = xmlDoc.getElementsByTagName("fourthsrc_9"),
+        fifthsrc_9 = xmlDoc.getElementsByTagName("fifthsrc_9"),
+        modalyear_9 = xmlDoc.getElementsByTagName("modalyear_9"),
+        modalvolanta_9 = xmlDoc.getElementsByTagName("modalvolanta_9"),
+        modaltitle_9 = xmlDoc.getElementsByTagName("modaltitle_9"),
+        modaltext_9 = xmlDoc.getElementsByTagName("modaltext_9"),
+        modalback_9 = xmlDoc.getElementsByTagName("modalback_9");          
+        insta = xmlDoc.getElementsByTagName("insta");
+        behance = xmlDoc.getElementsByTagName("behance");
+
+        $("[template='insta']").attr('href', insta[0].childNodes[0].nodeValue);
+        $("[template='behance']").attr('href', behance[0].childNodes[0].nodeValue);
+        $("[template='firstsrc_9']").attr('src', firstsrc_9[0].childNodes[0].nodeValue);
+        $("[template='secondsrc_9']").attr('src', secondsrc_9[0].childNodes[0].nodeValue);
+        $("[template='thirdsrc_9']").attr('src', thirdsrc_9[0].childNodes[0].nodeValue);
+        $("[template='fourthsrc_9']").attr('src', fourthsrc_9[0].childNodes[0].nodeValue);
+        $("[template='fifthsrc_9']").attr('src', fifthsrc_9[0].childNodes[0].nodeValue);
+        $("[template='modalyear_9']").html(modalyear_9[0].childNodes[0].nodeValue);
+        $("[template='modalvolanta_9']").html(modalvolanta_9[0].childNodes[0].nodeValue);
+        $("[template='modaltitle_9']").html(modaltitle_9[0].childNodes[0].nodeValue);
+        $("[template='modaltext_9']").html(modaltext_9[0].childNodes[0].nodeValue);
+        $("[template='modalback_9']").html(modalback_9[0].childNodes[0].nodeValue);
+
+    }
+</script>
+<div class="modal-content">
+    <div class="modal-body">
+            <section class="container-fluid">
+                    <div class="row">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="firstsrc_9">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="secondsrc_9">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="thirdsrc_9">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fourthsrc_9">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fifthsrc_9">
+                    </div>
+              </section>
+
+          <section class="container">
+              <div class="modal-text">
+                    <div class="partners">
+                        <article class="column-right">
+                            <div>
+                                <p class="black-text little bold-text center-text modal-year" template="modalyear_9">
+
+                                </p>
+                                <hr class="black-line">
+                            </div>
+                        </article>
+                        <article class="column-left">
+                            <p class="darkgrey-text role modal-volanta" template="modalvolanta_9"></p>
+                            <p class="darkgrey-text name modal-title" template="modaltitle_9"></p> 
+                            <p class="darkgrey-text description modal-desc" template="modaltext_9"></p>                                    
+                        </article>
+                    </div>
+                    <article class="row modalheader">
+                        <div class="col-9 align-bottom">
+                            <a class="goback" data-dismiss="modal">
+                                <img src="assets/images/back.png">
+                                <p class="black-text little bold-text" template="modalback_9"></p>
+                            </a>
+                        </div>
+                        <div class="col-3 center-text heart-column align-bottom">
+                            <div class="social">
+                                <a template="insta"><img src="assets/images/insta.PNG"></a>
+                                <a template="behance"><img src="assets/images/behance.PNG"></a>
+                            </div>
+                        </div>                                   
+                    </article>
+              </div>
+          </section>                  
+    </div>
+</div>

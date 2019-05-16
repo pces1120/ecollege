@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+<script>
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+        }
+    };
+    xhttp.open("GET", "assets/data/modal-es.xml", true);
+    xhttp.send();
+
+    function myFunction(xml) {
+        let xmlDoc = xml.responseXML,
+        firstsrc_14 = xmlDoc.getElementsByTagName("firstsrc_14"),
+        secondsrc_14 = xmlDoc.getElementsByTagName("secondsrc_14"),
+        thirdsrc_14 = xmlDoc.getElementsByTagName("thirdsrc_14"),
+        fourthsrc_14 = xmlDoc.getElementsByTagName("fourthsrc_14"),
+        fifthsrc_14 = xmlDoc.getElementsByTagName("fifthsrc_14"),
+        sixthsrc_14 = xmlDoc.getElementsByTagName("sixthsrc_14"),
+        seventhsrc_14 = xmlDoc.getElementsByTagName("seventhsrc_14"),
+        eightsrc_14 = xmlDoc.getElementsByTagName("eightsrc_14"),
+        ninthsrc_14 = xmlDoc.getElementsByTagName("ninthsrc_14"),
+        tenthsrc_14 = xmlDoc.getElementsByTagName("tenthsrc_14"),
+        eleventhsrc_14 = xmlDoc.getElementsByTagName("eleventhsrc_14"),
+        modalyear_14 = xmlDoc.getElementsByTagName("modalyear_14"),
+        modalvolanta_14 = xmlDoc.getElementsByTagName("modalvolanta_14"),
+        modaltitle_14 = xmlDoc.getElementsByTagName("modaltitle_14"),
+        modaltext_14 = xmlDoc.getElementsByTagName("modaltext_14"),
+        modalback_14 = xmlDoc.getElementsByTagName("modalback_14");          
+        insta = xmlDoc.getElementsByTagName("insta");
+        behance = xmlDoc.getElementsByTagName("behance");
+
+        $("[template='insta']").attr('href', insta[0].childNodes[0].nodeValue);
+        $("[template='behance']").attr('href', behance[0].childNodes[0].nodeValue);
+        $("[template='firstsrc_14']").attr('src', firstsrc_14[0].childNodes[0].nodeValue);
+        $("[template='secondsrc_14']").attr('src', secondsrc_14[0].childNodes[0].nodeValue);
+        $("[template='thirdsrc_14']").attr('src', thirdsrc_14[0].childNodes[0].nodeValue);
+        $("[template='fourthsrc_14']").attr('src', fourthsrc_14[0].childNodes[0].nodeValue);
+        $("[template='fifthsrc_14']").attr('src', fifthsrc_14[0].childNodes[0].nodeValue);
+        $("[template='sixthsrc_14']").attr('src', sixthsrc_14[0].childNodes[0].nodeValue);
+        $("[template='seventhsrc_14']").attr('src', seventhsrc_14[0].childNodes[0].nodeValue);
+        $("[template='eightsrc_14']").attr('src', eightsrc_14[0].childNodes[0].nodeValue);
+        $("[template='ninthsrc_14']").attr('src', ninthsrc_14[0].childNodes[0].nodeValue);
+        $("[template='tenthsrc_14']").attr('src', tenthsrc_14[0].childNodes[0].nodeValue);
+        $("[template='eleventhsrc_14']").attr('src', eleventhsrc_14[0].childNodes[0].nodeValue);
+        $("[template='modalyear_14']").html(modalyear_14[0].childNodes[0].nodeValue);
+        $("[template='modalvolanta_14']").html(modalvolanta_14[0].childNodes[0].nodeValue);
+        $("[template='modaltitle_14']").html(modaltitle_14[0].childNodes[0].nodeValue);
+        $("[template='modalback_14']").html(modalback_14[0].childNodes[0].nodeValue);
+        $("[template='modaltext_14']").html(modaltext_14[0].childNodes[0].nodeValue);
+        
+
+    }
+</script>
+<div class="modal-content">
+    <div class="modal-body">
+            <section class="container-fluid">
+                    <div class="row">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="firstsrc_14">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="secondsrc_14">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="thirdsrc_14">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fourthsrc_14">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fifthsrc_14">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="sixthsrc_14">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="seventhsrc_14">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="eightsrc_14">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="ninthsrc_14">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="tenthsrc_14">
+                        <img class="image-modal image-mosaic col-sm-10 align-center" template="eleventhsrc_14">
+                    </div>
+              </section>
+
+          <section class="container">
+              <div class="modal-text">
+                    <div class="partners">
+                        <article class="column-right">
+                            <div>
+                                <p class="black-text little bold-text center-text modal-year" template="modalyear_14">
+
+                                </p>
+                                <hr class="black-line">
+                            </div>
+                        </article>
+                        <article class="column-left">
+                            <p class="darkgrey-text role modal-volanta" template="modalvolanta_14"></p>
+                            <p class="darkgrey-text name modal-title" template="modaltitle_14"></p> 
+                            <p class="darkgrey-text description modal-desc" template="modaltext_14"></p>                                    
+                        </article>
+                    </div>
+                    <article class="row modalheader">
+                        <div class="col-9 align-bottom">
+                            <a class="goback" data-dismiss="modal">
+                                <img src="assets/images/back.png">
+                                <p class="black-text little bold-text" template="modalback_14"></p>
+                            </a>
+                        </div>
+                        <div class="col-3 center-text heart-column align-bottom">
+                            <div class="social">
+                                <a template="insta"><img src="assets/images/insta.PNG"></a>
+                                <a template="behance"><img src="assets/images/behance.PNG"></a>
+                            </div>
+                        </div>                                   
+                    </article>
+              </div>
+          </section>                  
+    </div>
+</div>
