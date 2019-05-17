@@ -1,141 +1,19 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
-<script>
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            myFunction(this);
-        }
-    };
-    xhttp.open("GET", "assets/data/modal-es.xml", true);
-    xhttp.send();
-
-    function myFunction(xml) {
-        let xmlDoc = xml.responseXML,
-        firstsrc_2 = xmlDoc.getElementsByTagName("firstsrc_2"),
-        secondsrc_2 = xmlDoc.getElementsByTagName("secondsrc_2"),
-        thirdsrc_2 = xmlDoc.getElementsByTagName("thirdsrc_2"),
-        fourthsrc_2 = xmlDoc.getElementsByTagName("fourthsrc_2"),
-        fifthsrc_2 = xmlDoc.getElementsByTagName("fifthsrc_2"),
-        sixthsrc_2 = xmlDoc.getElementsByTagName("sixthsrc_2"),
-        seventhsrc_2 = xmlDoc.getElementsByTagName("seventhsrc_2"),
-        eightsrc_2 = xmlDoc.getElementsByTagName("eightsrc_2"),
-        ninthsrc_2 = xmlDoc.getElementsByTagName("ninthsrc_2"),
-        tenthsrc_2 = xmlDoc.getElementsByTagName("tenthsrc_2"),
-        eleventhsrc_2 = xmlDoc.getElementsByTagName("eleventhsrc_2"),
-        twelvethsrc_2 = xmlDoc.getElementsByTagName("twelvethsrc_2"),
-        thirdteenthsrc_2 = xmlDoc.getElementsByTagName("thirdteenthsrc_2"),
-        fourteenthsrc_2 = xmlDoc.getElementsByTagName("fourteenthsrc_2"),
-        fifteenthsrc_2 = xmlDoc.getElementsByTagName("fifteenthsrc_2"),
-        sixteenthsrc_2 = xmlDoc.getElementsByTagName("sixteenthsrc_2"),
-        seventeenthsrc_2 = xmlDoc.getElementsByTagName("seventeenthsrc_2"),
-        eighteenthsrc_2 = xmlDoc.getElementsByTagName("eighteenthsrc_2"),
-        nineteenthsrc_2 = xmlDoc.getElementsByTagName("nineteenthsrc_2"),
-        twentiethsrc_2 = xmlDoc.getElementsByTagName("twentiethsrc_2"),
-        twentyfirstsrc_2 = xmlDoc.getElementsByTagName("twentyfirstsrc_2"),
-        twentysecondsrc_2 = xmlDoc.getElementsByTagName("twentysecondsrc_2"),
-        modalyear_2 = xmlDoc.getElementsByTagName("modalyear_2"),
-        modalvolanta_2 = xmlDoc.getElementsByTagName("modalvolanta_2"),
-        modaltitle_2 = xmlDoc.getElementsByTagName("modaltitle_2"),
-        modaltext_2 = xmlDoc.getElementsByTagName("modaltext_2"),
-        modalback_2 = xmlDoc.getElementsByTagName("modalback_2");          
-        insta = xmlDoc.getElementsByTagName("insta");
-        behance = xmlDoc.getElementsByTagName("behance");
-
-        $("[template='insta']").attr('href', insta[0].childNodes[0].nodeValue);
-        $("[template='behance']").attr('href', behance[0].childNodes[0].nodeValue);
-        $("[template='firstsrc_2']").attr('src', firstsrc_2[0].childNodes[0].nodeValue);
-        $("[template='secondsrc_2']").attr('src', secondsrc_2[0].childNodes[0].nodeValue);
-        $("[template='thirdsrc_2']").attr('src', thirdsrc_2[0].childNodes[0].nodeValue);
-        $("[template='fourthsrc_2']").attr('src', fourthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='fifthsrc_2']").attr('src', fifthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='sixthsrc_2']").attr('src', sixthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='seventhsrc_2']").attr('src', seventhsrc_2[0].childNodes[0].nodeValue);
-        $("[template='eightsrc_2']").attr('src', eightsrc_2[0].childNodes[0].nodeValue);
-        $("[template='ninthsrc_2']").attr('src', ninthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='tenthsrc_2']").attr('src', tenthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='eleventhsrc_2']").attr('src', eleventhsrc_2[0].childNodes[0].nodeValue);
-        $("[template='twelvethsrc_2']").attr('src', twelvethsrc_2[0].childNodes[0].nodeValue);
-        $("[template='thirdteenthsrc_2']").attr('src', thirdteenthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='fourteenthsrc_2']").attr('src', fourteenthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='fifteenthsrc_2']").attr('src', fifteenthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='sixteenthsrc_2']").attr('src', sixteenthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='seventeenthsrc_2']").attr('src', seventeenthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='eighteenthsrc_2']").attr('src', eighteenthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='nineteenthsrc_2']").attr('src', nineteenthsrc_2[0].childNodes[0].nodeValue);
-        $("[template='twentiethsrc_2']").attr('src', twentiethsrc_2[0].childNodes[0].nodeValue);
-        $("[template='twentyfirstsrc_2']").attr('src', twentyfirstsrc_2[0].childNodes[0].nodeValue);
-        $("[template='twentysecondsrc_2']").attr('src', twentysecondsrc_2[0].childNodes[0].nodeValue);
-        $("[template='modalyear_2']").html(modalyear_2[0].childNodes[0].nodeValue);
-        $("[template='modalvolanta_2']").html(modalvolanta_2[0].childNodes[0].nodeValue);
-        $("[template='modaltitle_2']").html(modaltitle_2[0].childNodes[0].nodeValue);
-        $("[template='modaltext_2']").html(modaltext_2[0].childNodes[0].nodeValue);
-        $("[template='modalback_2']").html(modalback_2[0].childNodes[0].nodeValue);
-
-    }
-</script>
 <div class="modal-content">
     <div class="modal-body">
-            <section class="container-fluid">
-                    <div class="row">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="firstsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="secondsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="thirdsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fourthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fifthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="sixthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="seventhsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="eightsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="ninthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="tenthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="eleventhsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="twelvethsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="thirdteenthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fourteenthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fifteenthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="sixteenthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="seventeenthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="eighteenthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="nineteenthsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="twentiethsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="twentyfirstsrc_2">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="twentysecondsrc_2">
-                    </div>
-              </section>
-
-          <section class="container">
-              <div class="modal-text">
-                    <div class="partners">
-                        <article class="column-right">
-                            <div>
-                                <p class="black-text little bold-text center-text modal-year" template="modalyear_2">
-
-                                </p>
-                                <hr class="black-line">
-                            </div>
+          <section class="container-fluid">
+                <article class="row">
+                        <article class="flex-header">
+                            <div class="flex-title">
+                                <div class="round"></div>
+                                <p class="modal-title blue-text"><strong>Agendas</strong></p>
+                                </div>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </article>
-                        <article class="column-left">
-                            <p class="darkgrey-text role modal-volanta" template="modalvolanta_2"></p>
-                            <p class="darkgrey-text name modal-title" template="modaltitle_2"></p> 
-                            <p class="darkgrey-text description modal-desc" template="modaltext_2"></p>                                    
-                        </article>
-                    </div>
-                    <article class="row modalheader">
-                        <div class="col-9 align-bottom">
-                            <a class="goback" data-dismiss="modal">
-                                <img src="assets/images/back.png">
-                                <p class="black-text little bold-text" template="modalback_2"></p>
-                            </a>
-                        </div>
-                        <div class="col-3 center-text heart-column align-bottom">
-                            <div class="social">
-                                <a template="insta"><img src="assets/images/insta.PNG"></a>
-                                <a template="behance"><img src="assets/images/behance.PNG"></a>
-                            </div>
-                        </div>                                   
-                    </article>
-              </div>
-          </section>                  
+                    <p class="modal-paragraph blue-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+          </section>      
     </div>
 </div>

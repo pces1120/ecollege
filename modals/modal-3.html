@@ -1,108 +1,19 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
-<script>
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            myFunction(this);
-        }
-    };
-    xhttp.open("GET", "assets/data/modal-es.xml", true);
-    xhttp.send();
-
-    function myFunction(xml) {
-        let xmlDoc = xml.responseXML,
-        firstsrc_3 = xmlDoc.getElementsByTagName("firstsrc_3"),
-        secondsrc_3 = xmlDoc.getElementsByTagName("secondsrc_3"),
-        thirdsrc_3 = xmlDoc.getElementsByTagName("thirdsrc_3"),
-        fourthsrc_3 = xmlDoc.getElementsByTagName("fourthsrc_3"),
-        fifthsrc_3 = xmlDoc.getElementsByTagName("fifthsrc_3"),
-        sixthsrc_3 = xmlDoc.getElementsByTagName("sixthsrc_3"),
-        seventhsrc_3 = xmlDoc.getElementsByTagName("seventhsrc_3"),
-        eightsrc_3 = xmlDoc.getElementsByTagName("eightsrc_3"),
-        ninthsrc_3 = xmlDoc.getElementsByTagName("ninthsrc_3"),
-        tenthsrc_3 = xmlDoc.getElementsByTagName("tenthsrc_3"),
-        eleventhsrc_3 = xmlDoc.getElementsByTagName("eleventhsrc_3"),
-        modalyear_3 = xmlDoc.getElementsByTagName("modalyear_3"),
-        modalvolanta_3 = xmlDoc.getElementsByTagName("modalvolanta_3"),
-        modaltitle_3 = xmlDoc.getElementsByTagName("modaltitle_3"),
-        modaltext_3 = xmlDoc.getElementsByTagName("modaltext_3"),
-        modalback_3 = xmlDoc.getElementsByTagName("modalback_3");          
-        insta = xmlDoc.getElementsByTagName("insta");
-        behance = xmlDoc.getElementsByTagName("behance");
-
-        $("[template='insta']").attr('href', insta[0].childNodes[0].nodeValue);
-        $("[template='behance']").attr('href', behance[0].childNodes[0].nodeValue);
-        $("[template='firstsrc_3']").attr('src', firstsrc_3[0].childNodes[0].nodeValue);
-        $("[template='secondsrc_3']").attr('src', secondsrc_3[0].childNodes[0].nodeValue);
-        $("[template='thirdsrc_3']").attr('src', thirdsrc_3[0].childNodes[0].nodeValue);
-        $("[template='fourthsrc_3']").attr('src', fourthsrc_3[0].childNodes[0].nodeValue);
-        $("[template='fifthsrc_3']").attr('src', fifthsrc_3[0].childNodes[0].nodeValue);
-        $("[template='sixthsrc_3']").attr('src', sixthsrc_3[0].childNodes[0].nodeValue);
-        $("[template='seventhsrc_3']").attr('src', seventhsrc_3[0].childNodes[0].nodeValue);
-        $("[template='eightsrc_3']").attr('src', eightsrc_3[0].childNodes[0].nodeValue);
-        $("[template='ninthsrc_3']").attr('src', ninthsrc_3[0].childNodes[0].nodeValue);
-        $("[template='tenthsrc_3']").attr('src', tenthsrc_3[0].childNodes[0].nodeValue);
-        $("[template='eleventhsrc_3']").attr('src', eleventhsrc_3[0].childNodes[0].nodeValue);
-        $("[template='modalyear_3']").html(modalyear_3[0].childNodes[0].nodeValue);
-        $("[template='modalvolanta_3']").html(modalvolanta_3[0].childNodes[0].nodeValue);
-        $("[template='modaltitle_3']").html(modaltitle_3[0].childNodes[0].nodeValue);
-        $("[template='modaltext_3']").html(modaltext_3[0].childNodes[0].nodeValue);
-        $("[template='modalback_3']").html(modalback_3[0].childNodes[0].nodeValue);
-
-    }
-</script>
 <div class="modal-content">
     <div class="modal-body">
-            <section class="container-fluid">
-                    <div class="row">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="firstsrc_3">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="secondsrc_3">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="thirdsrc_3">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fourthsrc_3">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fifthsrc_3">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="sixthsrc_3">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="seventhsrc_3">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="eightsrc_3">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="ninthsrc_3">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="tenthsrc_3">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="eleventhsrc_3">
-                    </div>
-              </section>
-
-          <section class="container">
-              <div class="modal-text">
-                    <div class="partners">
-                        <article class="column-right">
-                            <div>
-                                <p class="black-text little bold-text center-text modal-year" template="modalyear_3">
-
-                                </p>
-                                <hr class="black-line">
-                            </div>
+          <section class="container-fluid">
+                <article class="row">
+                        <article class="flex-header">
+                            <div class="flex-title">
+                                <div class="round"></div>
+                                <p class="modal-title blue-text"><strong>Cursos</strong></p>
+                                </div>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </article>
-                        <article class="column-left">
-                            <p class="darkgrey-text role modal-volanta" template="modalvolanta_3"></p>
-                            <p class="darkgrey-text name modal-title" template="modaltitle_3"></p> 
-                            <p class="darkgrey-text description modal-desc" template="modaltext_3"></p>                                    
-                        </article>
-                    </div>
-                    <article class="row modalheader">
-                        <div class="col-9 align-bottom">
-                            <a class="goback" data-dismiss="modal">
-                                <img src="assets/images/back.png">
-                                <p class="black-text little bold-text" template="modalback_3"></p>
-                            </a>
-                        </div>
-                        <div class="col-3 center-text heart-column align-bottom">
-                            <div class="social">
-                                <a template="insta"><img src="assets/images/insta.PNG"></a>
-                                <a template="behance"><img src="assets/images/behance.PNG"></a>
-                            </div>
-                        </div>                                   
-                    </article>
-              </div>
-          </section>                  
+                    <p class="modal-paragraph blue-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+          </section>      
     </div>
 </div>

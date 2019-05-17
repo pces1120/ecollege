@@ -343,13 +343,13 @@ footer{
     background-size: cover;
     background-color: transparent;
 }
-.after_modal_appended
+/*.after_modal_appended
 {  
   position:relative;
 }
 .modal, .modal-backdrop {
     position: absolute !important;
-}
+}*/
 .modal-backdrop, .modal-backdrop.show{
     display: none;
     opacity: 0;
@@ -357,6 +357,8 @@ footer{
 .modal{
     z-index: 1029;
     text-align: left;
+    padding-right: 0px!important;
+    top: 130px;
 }
 .modal .modal-paragraph{
     font-size: 14px;
@@ -370,10 +372,16 @@ footer{
     height: 30px;
     margin-right: 10px;
 }
+.flex-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;    
+    margin-bottom: 10px;
+}
 .flex-title{
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
 @media (max-width: 991px) {
     .navbar{

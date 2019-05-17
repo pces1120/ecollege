@@ -1,94 +1,19 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
-<script>
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            myFunction(this);
-        }
-    };
-    xhttp.open("GET", "assets/data/modal-es.xml", true);
-    xhttp.send();
-
-    function myFunction(xml) {
-        let xmlDoc = xml.responseXML,
-        firstsrc_11 = xmlDoc.getElementsByTagName("firstsrc_11"),
-        secondsrc_11 = xmlDoc.getElementsByTagName("secondsrc_11"),
-        thirdsrc_11 = xmlDoc.getElementsByTagName("thirdsrc_11"),
-        fourthsrc_11 = xmlDoc.getElementsByTagName("fourthsrc_11"),
-        fifthsrc_11 = xmlDoc.getElementsByTagName("fifthsrc_11"),
-        sixthsrc_11 = xmlDoc.getElementsByTagName("sixthsrc_11"),
-        modalyear_11 = xmlDoc.getElementsByTagName("modalyear_11"),
-        modalvolanta_11 = xmlDoc.getElementsByTagName("modalvolanta_11"),
-        modaltitle_11 = xmlDoc.getElementsByTagName("modaltitle_11"),
-        modaltext_11 = xmlDoc.getElementsByTagName("modaltext_11"), 
-        modalback_11 = xmlDoc.getElementsByTagName("modalback_11");          
-        insta = xmlDoc.getElementsByTagName("insta");
-        behance = xmlDoc.getElementsByTagName("behance");
-
-        $("[template='insta']").attr('href', insta[0].childNodes[0].nodeValue);
-        $("[template='behance']").attr('href', behance[0].childNodes[0].nodeValue);
-        $("[template='firstsrc_11']").attr('src', firstsrc_11[0].childNodes[0].nodeValue);
-        $("[template='secondsrc_11']").attr('src', secondsrc_11[0].childNodes[0].nodeValue);
-        $("[template='thirdsrc_11']").attr('src', thirdsrc_11[0].childNodes[0].nodeValue);
-        $("[template='fourthsrc_11']").attr('src', fourthsrc_11[0].childNodes[0].nodeValue);
-        $("[template='fifthsrc_11']").attr('src', fifthsrc_11[0].childNodes[0].nodeValue);
-        $("[template='sixthsrc_11']").attr('src', sixthsrc_11[0].childNodes[0].nodeValue);
-        $("[template='modalyear_11']").html(modalyear_11[0].childNodes[0].nodeValue);
-        $("[template='modalvolanta_11']").html(modalvolanta_11[0].childNodes[0].nodeValue);
-        $("[template='modaltitle_11']").html(modaltitle_11[0].childNodes[0].nodeValue);
-        $("[template='modaltext_11']").html(modaltext_11[0].childNodes[0].nodeValue);
-        $("[template='modalback_11']").html(modalback_11[0].childNodes[0].nodeValue);
-        
-
-    }
-</script>
 <div class="modal-content">
     <div class="modal-body">
-            <section class="container-fluid">
-                    <div class="row">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="firstsrc_11">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="secondsrc_11">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="thirdsrc_11">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fourthsrc_11">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="fifthsrc_11">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="sixthsrc_11">
-                    </div>
-              </section>
-
-          <section class="container">
-              <div class="modal-text">
-                    <div class="partners">
-                        <article class="column-right">
-                            <div>
-                                <p class="black-text little bold-text center-text modal-year" template="modalyear_11">
-
-                                </p>
-                                <hr class="black-line">
-                            </div>
+          <section class="container-fluid">
+                <article class="row">
+                        <article class="flex-header">
+                            <div class="flex-title">
+                                <div class="round"></div>
+                                <p class="modal-title blue-text"><strong>Reportes</strong></p>
+                                </div>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </article>
-                        <article class="column-left">
-                            <p class="darkgrey-text role modal-volanta" template="modalvolanta_11"></p>
-                            <p class="darkgrey-text name modal-title" template="modaltitle_11"></p> 
-                            <p class="darkgrey-text description modal-desc" template="modaltext_11"></p>                                    
-                        </article>
-                    </div>
-                    <article class="row modalheader">
-                        <div class="col-9 align-bottom">
-                            <a class="goback" data-dismiss="modal">
-                                <img src="assets/images/back.png">
-                                <p class="black-text little bold-text" template="modalback_11"></p>
-                            </a>
-                        </div>
-                        <div class="col-3 center-text heart-column align-bottom">
-                            <div class="social">
-                                <a template="insta"><img src="assets/images/insta.PNG"></a>
-                                <a template="behance"><img src="assets/images/behance.PNG"></a>
-                            </div>
-                        </div>                                   
-                    </article>
-              </div>
-          </section>                  
+                    <p class="modal-paragraph blue-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+          </section>      
     </div>
 </div>

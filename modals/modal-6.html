@@ -1,84 +1,19 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
-<script>
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            myFunction(this);
-        }
-    };
-    xhttp.open("GET", "assets/data/modal-es.xml", true);
-    xhttp.send();
-
-    function myFunction(xml) {
-        let xmlDoc = xml.responseXML,
-        firstsrc_6 = xmlDoc.getElementsByTagName("firstsrc_6"),
-        secondsrc_6 = xmlDoc.getElementsByTagName("secondsrc_6"),
-        thirdsrc_6 = xmlDoc.getElementsByTagName("thirdsrc_6"),
-        modalyear_6 = xmlDoc.getElementsByTagName("modalyear_6"),
-        modalvolanta_6 = xmlDoc.getElementsByTagName("modalvolanta_6"),
-        modaltitle_6 = xmlDoc.getElementsByTagName("modaltitle_6"),
-        modaltext_6 = xmlDoc.getElementsByTagName("modaltext_6"),          
-        modalback_6 = xmlDoc.getElementsByTagName("modalback_6");
-        insta = xmlDoc.getElementsByTagName("insta");
-        behance = xmlDoc.getElementsByTagName("behance");
-
-        $("[template='insta']").attr('href', insta[0].childNodes[0].nodeValue);
-        $("[template='behance']").attr('href', behance[0].childNodes[0].nodeValue);
-        $("[template='firstsrc_6']").attr('src', firstsrc_6[0].childNodes[0].nodeValue);
-        $("[template='secondsrc_6']").attr('src', secondsrc_6[0].childNodes[0].nodeValue);
-        $("[template='thirdsrc_6']").attr('src', thirdsrc_6[0].childNodes[0].nodeValue);
-        $("[template='modalyear_6']").html(modalyear_6[0].childNodes[0].nodeValue);
-        $("[template='modalvolanta_6']").html(modalvolanta_6[0].childNodes[0].nodeValue);
-        $("[template='modaltitle_6']").html(modaltitle_6[0].childNodes[0].nodeValue);
-        $("[template='modaltext_6']").html(modaltext_6[0].childNodes[0].nodeValue);
-        $("[template='modalback_6']").html(modalback_6[0].childNodes[0].nodeValue);
-
-    }
-</script>
 <div class="modal-content">
     <div class="modal-body">
-            <section class="container-fluid">
-                    <div class="row">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="firstsrc_6">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="secondsrc_6">
-                        <img class="image-modal image-mosaic col-sm-10 align-center" template="thirdsrc_6">
-                    </div>
-            </section>
-
-          <section class="container">
-              <div class="modal-text">
-                    <div class="partners">
-                        <article class="column-right">
-                            <div>
-                                <p class="black-text little bold-text center-text modal-year" template="modalyear_6">
-
-                                </p>
-                                <hr class="black-line">
-                            </div>
+          <section class="container-fluid">
+                <article class="row">
+                        <article class="flex-header">
+                            <div class="flex-title">
+                                <div class="round"></div>
+                                <p class="modal-title blue-text"><strong>Ausencias</strong></p>
+                                </div>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </article>
-                        <article class="column-left">
-                            <p class="darkgrey-text role modal-volanta" template="modalvolanta_6"></p>
-                            <p class="darkgrey-text name modal-title" template="modaltitle_6"></p> 
-                            <p class="darkgrey-text description modal-desc" template="modaltext_6"></p>                                    
-                        </article>
-                    </div>
-                    <article class="row modalheader">
-                        <div class="col-9 align-bottom">
-                            <a class="goback" data-dismiss="modal">
-                                <img src="assets/images/back.png">
-                                <p class="black-text little bold-text" template="modalback_6"></p>
-                            </a>
-                        </div>
-                        <div class="col-3 center-text heart-column align-bottom">
-                            <div class="social">
-                                <a template="insta"><img src="assets/images/insta.PNG"></a>
-                                <a template="behance"><img src="assets/images/behance.PNG"></a>
-                            </div>
-                        </div>                                   
-                    </article>
-              </div>
-          </section>                  
+                    <p class="modal-paragraph blue-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+          </section>      
     </div>
 </div>

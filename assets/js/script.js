@@ -3,8 +3,8 @@
             $(circles).bind('mouseenter mouseleave click touchstart', function (event) {
                 if (event.type == 'click' || event.type=='touchstart') {
                     $("#exampleModal").modal("show");
-                    $("#third-section").addClass("after_modal_appended");
-                    $('.modal-backdrop').appendTo('#third-section');   
+                    /*$("#third-section").addClass("after_modal_appended");
+                    $('.modal-backdrop').appendTo('#third-section');   */
                     $('body').removeClass("modal-open")
                     $('body').css("padding-right","");
                         
