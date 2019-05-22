@@ -22,20 +22,17 @@
                 }
             });
         });
-        
-        /*Open modal*/
-        function whatever (index){
-            $.ajax({
-                url: "modals/modal-" + index + ".html",
-                beforeSend: function () {
-                    $('#modal').fadeIn();
-                },
-                success: function (result) {
-                    $('#mainModal').html(result);
-                    $('#mainModal').fadeIn();
-                    $("#modal").toggleClass('show');
-                }
-            });
+
+        var pops = ["1", "2", "3", "4", "5", "6","7", "8", "9", "10", "11", "12", "13", "14", "15"];
+        var i;
+        for (i = 0; i < pops.length; i++) { 
+
+        $('article[rel=pop-'+i+']').popover({
+            html: true,
+            placement: 'left',
+            trigger: 'hover',
+            title: function(){return '<img src="'+$(this).data('img') + '" class="round" />'+ $(this).data('title');}
+        });
         }
 
         function scrollToAnchor(aid){

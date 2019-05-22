@@ -360,16 +360,20 @@ footer{
     padding-right: 0px!important;
     top: 130px;
 }
-.modal .modal-paragraph{
+.popover-content{
     font-size: 14px;
+    color: #000033;
 }
-.modal .modal-title{
+.popover-header {
     font-size: 18px;
+    color: #000033;
+    background: #ffffff;
+    border-bottom: none;
+}
+.popover{
+    padding: 10px;
 }
 .round{
-    background-color: #000033;
-    width: 30px;
-    height: 30px;
     margin-right: 10px;
 }
 .flex-header{
@@ -382,6 +386,9 @@ footer{
 .flex-title{
     display: flex;
     align-items: center;
+}
+.popover .arrow {
+    display: none;
 }
 @media (max-width: 991px) {
     .navbar{
