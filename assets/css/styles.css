@@ -113,10 +113,10 @@ ul.navbar-nav{
     padding: .375rem 1.75rem;
 }
 #second-section, #third-section, #fifth-section, #sixth-section, #eigth-section{
-    padding: 60px 15px;
+    padding: 30px 15px;
 }
 #fourth-section{
-    padding: 50px 15px 20px 15px;
+    padding: 30px 15px 20px 15px;
 }
 #second-section, #fourth-section {
     background-color: #f2edf7;
@@ -475,7 +475,7 @@ footer{
         margin: 25px 0px auto auto;
     }
     #second-section, #third-section, #fifth-section, #sixth-section,#eigth-section{
-        padding: 50px 15px;
+        padding: 30px 15px;
     }
     #fourth-section{
         padding: 30px 15px 20px 15px;
